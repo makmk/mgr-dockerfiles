@@ -1,0 +1,8 @@
+version: '2'
+services:
+  java:
+    build:
+      context: ./java8
+      dockerfile: java8.dockerfile
+    image: registry.docker.kosmala.work/jdk:java8
+
