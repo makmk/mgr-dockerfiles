@@ -5,4 +5,9 @@ services:
       context: ./java8
       dockerfile: java8.dockerfile
     image: registry.docker.kosmala.work/jdk:java8
+  hadoop-base:
+    build:
+      context: ./hadoop-base
+      dockerfile: hadoop-base.dockerfile
+    image: registry.docker.kosmala.work/hadoop/hadoop-base:base
 
