@@ -13,4 +13,4 @@ ENV JAVA_VERSION=8u92  \
 RUN apk add --update --no-cache ca-certificates && \
     apk add --no-cache openjdk8-jre="$JAVA_ALPINE_VERSION"
 
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/urandom"]
+CMD ["java", "-Djava.security.egd=file:/dev/urandom"]
