@@ -18,4 +18,5 @@ RUN wget https://s3.eu-central-1.amazonaws.com/mgr-tools/utils/protobuf-alpine/p
     apk add --no-cache protobuf-2.5.0-r1.apk hadoop-2.7.3-r0.apk --allow-untrusted && \
     rm protobuf-2.5.0-r1.apk hadoop-2.7.3-r0.apk
     
+ENV HADOOP_HOME "/hadoop/"
 WORKDIR /hadoop-source

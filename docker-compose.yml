@@ -8,6 +8,6 @@ services:
   hadoop-base:
     build:
       context: ./hadoop-base
-      dockerfile: hadoop-base.dockerfile
+      dockerfile: Dockerfile
     image: registry.docker.kosmala.work/hadoop/hadoop-base:base
 
