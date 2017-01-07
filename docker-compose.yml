@@ -45,4 +45,3 @@ services:
       context: ./hadoop-resourcemanager
       dockerfile: Dockerfile
     image: registry.docker.kosmala.work/hadoop/hadoop-resourcemanager
-
