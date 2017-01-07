@@ -8,6 +8,41 @@ services:
   hadoop-base:
     build:
       context: ./hadoop-base
-      dockerfile: hadoop-base.dockerfile
-    image: registry.docker.kosmala.work/hadoop/hadoop-base:base
+      dockerfile: Dockerfile
+    image: registry.docker.kosmala.work/hadoop/hadoop-base
+  hadoop-datanode:
+    build:
+      context: ./hadoop-datanode
+      dockerfile: Dockerfile
+    image: registry.docker.kosmala.work/hadoop/hadoop-datanode
+  hadoop-history:
+    build:
+      context: ./hadoop-history
+      dockerfile: Dockerfile
+    image: registry.docker.kosmala.work/hadoop/hadoop-history
+  hadoop-mapreduce:
+    build:
+      context: ./hadoop-mapreduce
+      dockerfile: Dockerfile
+    image: registry.docker.kosmala.work/hadoop/hadoop-mapreduce
+  hadoop-mapreduce-jobhistory:
+    build:
+      context: ./hadoop-mapreduce-jobhistory
+      dockerfile: Dockerfile
+    image: registry.docker.kosmala.work/hadoop/hadoop-mapreduce-jobhistory
+  hadoop-namenode:
+    build:
+      context: ./hadoop-namenode
+      dockerfile: Dockerfile
+    image: registry.docker.kosmala.work/hadoop/hadoop-namenode
+  hadoop-nodemanager:
+    build:
+      context: ./hadoop-nodemanager
+      dockerfile: Dockerfile
+    image: registry.docker.kosmala.work/hadoop/hadoop-nodemanager
+  hadoop-resourcemanager:
+    build:
+      context: ./hadoop-resourcemanager
+      dockerfile: Dockerfile
+    image: registry.docker.kosmala.work/hadoop/hadoop-resourcemanager
 

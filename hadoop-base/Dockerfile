@@ -17,5 +17,11 @@ RUN wget https://s3.eu-central-1.amazonaws.com/mgr-tools/utils/protobuf-alpine/p
     wget https://s3.eu-central-1.amazonaws.com/mgr-tools/utils/hadoop-alpine-2.7.3/hadoop-2.7.3-r0.apk && \
     apk add --no-cache protobuf-2.5.0-r1.apk hadoop-2.7.3-r0.apk --allow-untrusted && \
     rm protobuf-2.5.0-r1.apk hadoop-2.7.3-r0.apk
+
+ENV HADOOP_HOME "/hadoop"
+COPY core-site.xml "$HADOOP_HOME/etc/hadoop/"
+COPY hdfs-site.xml "$HADOOP_HOME/etc/hadoop/"
+COPY yarn-site.xml "$HADOOP_HOME/etc/hadoop/"
+COPY mapred-site.xml "$HADOOP_HOME/etc/hadoop/"
     
-WORKDIR /hadoop-source
+WORKDIR ${HADOOP_HOME}
