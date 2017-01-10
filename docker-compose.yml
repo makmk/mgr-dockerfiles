@@ -40,6 +40,11 @@ services:
       context: ./hadoop-nodemanager
       dockerfile: Dockerfile
     image: registry.docker.kosmala.work/hadoop/hadoop-nodemanager
+    depends_on:
+      - hadoop-base
+      - hadoop-resourcemanager
+    links:
+      - hadoop-resourcemanager
   hadoop-resourcemanager:
     build:
       context: ./hadoop-resourcemanager
