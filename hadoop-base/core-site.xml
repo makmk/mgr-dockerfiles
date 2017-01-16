@@ -19,7 +19,7 @@
 <configuration>
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://hadoop-resourcemanager:8033</value>
-        <description>Address for ndfs filesystem</description>
+        <value>hdfs://hadoop-namenode:9000</value>
+        <description>Address for hdfs filesystem</description>
     </property>
 </configuration>
