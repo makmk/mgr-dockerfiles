@@ -19,6 +19,10 @@ RUN wget https://s3.eu-central-1.amazonaws.com/mgr-tools/utils/protobuf-alpine/p
     rm protobuf-2.5.0-r1.apk hadoop-2.7.3-r0.apk
 
 ENV HADOOP_HOME "/hadoop"
+ENV PATH="$HADOOP_HOME/bin:${JAVA_HOME}/bin:${PATH}"
+ENV JAVA_OPTS="${JAVA_OPTS} -Djava.net.preferIPv4Stack=true"
+#ENV HADOOP_CLASSPATH="${JAVA_HOME}/lib/tools.jar"
+#ENV HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/usr/local/hadoop/lib/native"
 COPY core-site.xml "$HADOOP_HOME/etc/hadoop/"
 COPY hdfs-site.xml "$HADOOP_HOME/etc/hadoop/"
 COPY yarn-site.xml "$HADOOP_HOME/etc/hadoop/"

@@ -35,7 +35,7 @@
     </property>
     <property>
         <name>yarn.nodemanager.resource.memory-mb</name>
-        <value>2048</value>
+        <value>12228</value>
     </property>
     <property>
         <name>yarn.nodemanager.vmem-pmem-ratio</name>
