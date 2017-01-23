@@ -2,10 +2,10 @@ FROM registry.docker.kosmala.work/alpine/alpine
 MAINTAINER Marek Kosmala <mkmarek91@gmail.com>
 
 ENV JAVA_VERSION=8u92  \
-    JAVA_ALPINE_VERSION=8.92.14-r1 \
+    JAVA_ALPINE_VERSION=8.111.14-r0 \
     JAVA_PACKAGE=server-jre \
-    JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk/jre \
-    PATH=${PATH}:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin \
+    JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk/ \
+    PATH=${PATH}:${JAVA_HOME}/bin/ \
     LANG=C.UTF-8
 
 # about nsswitch.conf - see https://registry.hub.docker.com/u/frolvlad/alpine-oraclejdk8/dockerfile/
